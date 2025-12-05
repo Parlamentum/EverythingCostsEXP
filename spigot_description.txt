@@ -1,0 +1,76 @@
+SpigotMC Plugin Submission Details
+
+Title:
+EverythingCostsEXP | XP Economy | Pay for Commands & Actions | Confirmation System | GUI Menu
+
+Tagline:
+Turn Experience Levels into a valuable currency! Charge XP for commands, block interactions, crafting, and more with a robust confirmation system.
+
+Description:
+
+EverythingCostsEXP transforms the way players value their Experience Levels. Instead of just using XP for enchanting, make it the core currency of your server!
+
+With this plugin, you can charge players XP levels for executing commands, breaking or placing specific blocks, crafting items, and performing various actions like fishing or breeding. It comes with a smart Confirmation System to ensure players know exactly what they are spending.
+
+=== Key Features ===
+
+* XP as Currency: Deduct XP levels for almost any interaction.
+* Command Costs: Charge for powerful commands like /home, /tp, /fly, etc.
+* Action Costs:
+    * Breaking specific blocks (e.g., Diamond Ore).
+    * Placing specific blocks (e.g., TNT).
+    * Crafting specific items (e.g., Diamond Sword).
+    * Enchanting, Fishing, Breeding, Taming, and Teleporting.
+* Smart Confirmation System:
+    * ONCE: Ask for confirmation only the first time a player pays for an action (User Friendly!).
+    * ALWAYS: Require confirmation every single time.
+    * NEVER: Instant deduction for fast-paced servers.
+* In-Game Menu: Players can type /xpmenu to see a beautiful Book GUI listing all current costs.
+* Visual Feedback: Configurable Action Bar messages, Titles, and Sound effects when paying.
+* Fully Configurable: Customize every cost, message, and setting in config.yml and messages.yml.
+
+=== Commands ===
+
+* /xpmenu - Open the GUI to view all XP costs.
+* /expcheck - Check your current XP balance.
+* /expconfirm - Confirm a pending payment.
+* /expreload - Reload the configuration (Admin).
+* /expset <player> <level> - Set a player's XP level (Admin).
+* /expadd <player> <level> - Add XP levels to a player (Admin).
+
+=== Permissions ===
+
+* exp.pay.* - Allow paying for all actions (Default: true).
+* exp.bypass.* - Bypass all XP costs (Default: OP).
+* exp.bypass.command.<command> - Bypass cost for a specific command.
+* exp.bypass.action.<action> - Bypass cost for a specific action.
+* exp.admin - Access to admin commands.
+
+=== Configuration ===
+
+The config.yml is simple and powerful:
+
+confirmation:
+  mode: ONCE # Options: ALWAYS, ONCE, NEVER
+  timeout: 30
+
+costs:
+  commands:
+    home: 10
+    tp: 35
+    gamemode: 50
+  actions:
+    enchant: 15
+    fishing: 5
+    block-break:
+      DIAMOND_ORE: 5
+
+=== Why use EverythingCostsEXP? ===
+Perfect for Hardcore servers, RPGs, or any server looking to add a sink for Experience Levels. Make death and XP loss matter more, or balance powerful commands by giving them a "magic cost".
+
+---
+Installation:
+1. Drop EverythingCostsEXP.jar into your plugins folder.
+2. Restart your server.
+3. Edit config.yml to set your prices.
+4. Enjoy a new economy!

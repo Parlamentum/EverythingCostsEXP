@@ -1,0 +1,46 @@
+name: EverythingCostsEXP
+version: '${project.version}'
+main: com.parlamentum.everythingcostsexp.EverythingCostsEXP
+api-version: 1.21
+authors: [YourName]
+description: Spend experience to power your server.
+
+commands:
+  expcheck:
+    description: Shows player current XP level and balance.
+    usage: /expcheck
+    permission: exp.pay.check
+    permission-message: You do not have permission to check your XP balance.
+  expreload:
+    description: Reload config.yml
+    usage: /expreload
+    permission: exp.admin
+    permission-message: You do not have permission to reload the configuration.
+  expset:
+    description: Set a player's XP
+    usage: /expset <player> <levels>
+    permission: exp.admin
+    permission-message: You do not have permission to set XP.
+  expadd:
+    description: Add XP to a player
+    usage: /expadd <player> <levels>
+    permission: exp.admin
+    permission-message: You do not have permission to add XP.
+  expconfirm:
+    description: Confirm a pending XP payment
+    usage: /expconfirm
+  xpmenu:
+    description: Open the XP cost menu
+    usage: /xpmenu
+
+permissions:
+  exp.pay.*:
+    description: Allow all payments
+    children:
+      exp.pay.check: true
+  exp.bypass.*:
+    description: Ignore XP cost for all actions
+    default: op
+  exp.admin:
+    description: Reload config and admin commands
+    default: op

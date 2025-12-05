@@ -1,0 +1,46 @@
+language: en
+
+display:
+  action-bar: true
+  sound: true
+  title-warning: false
+
+confirmation:
+  mode: ONCE # ALWAYS, ONCE, NEVER
+  timeout: 30 # Seconds
+
+costs:
+  # Command payments
+  # Format: command_name: cost
+  commands:
+    home: 10
+    back: 20
+    tp: 35
+    rtp: 15
+    me: 5
+    say: 5
+    gamemode: 50
+
+  # Action payments
+  actions:
+    # anvil: 5 # Removed as Vanilla handles this
+    enchant: 15
+    teleport: 0 # General teleport cost (careful with commands)
+    ender-pearl: 2
+    fishing: 0
+    breeding: 0
+    taming: 0
+    
+    # Crafting specific items
+    craft-diamond-sword: 30
+    
+    # Block breaking costs
+    # Format: block-break: MATERIAL: cost
+    block-break:
+      DIAMOND_ORE: 5
+      NETHERITE_BLOCK: 50
+      
+    # Block placing costs
+    # Format: block-place: MATERIAL: cost
+    block-place:
+      TNT: 10
